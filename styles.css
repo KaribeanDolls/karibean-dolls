@@ -1,0 +1,382 @@
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #ffddee);
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background-color: pink;
+  padding: 10px;
+}
+
+.site-title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff69b4;
+  text-shadow: 2px 2px #fff;
+}
+
+nav button {
+  background: #ff66cc;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+nav button:hover {
+  transform: scale(1.1);
+  background: #ff1493;
+}
+
+#glitterBtn {
+  margin-top: 30px;
+  background: linear-gradient(to right, #ff69b4, #ffb6c1);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+.glitter {
+  position: fixed;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background: url('glitter.png') no-repeat center/contain;
+  animation: fall 10s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* Polices forcées */
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.site-title {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 2.5em;
+  color: #ff69b4;
+}
+
+/* Nouvelle pluie glitter magique */
+
+.glitter {
+  position: fixed;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://i.imgur.com/zYxDCQT.png'); /* vraie paillette glitter PNG */
+  background-size: cover;
+  animation: glitterFall 10s ease-in forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px #ffb6f9);
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Glitter sparkle réparée */
+
+.glitter {
+  position: fixed;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-image: url('https://i.ibb.co/YZnBLzF/sparkle-pink.png'); /* vraie paillette cute PNG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 6px #ffb6f9);
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Glitter final rose étincelant */
+
+.glitter {
+  position: fixed;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url('glitter-sparkle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px #ffb6f9);
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Glitter version GIF animé jaune ✨ */
+
+.glitter {
+  position: fixed;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url('glitter-sparkle.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 6px #ffe066);
+}
+
+/* Glitter combiné étoiles + poussière magique */
+
+.glitter1, .glitter2 {
+  position: fixed;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 6px #ffd700);
+}
+
+.glitter1 {
+  background-image: url('glitter-stars.gif');
+}
+
+.glitter2 {
+  background-image: url('glitter-dust.gif');
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Glitter visuel personnalisé final */
+
+.glitter {
+  position: fixed;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background-image: url('glitter-final.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px #fff1f7);
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Correction accumulation haut */
+
+.glitter {
+  position: fixed;
+  top: -40px;
+  width: 36px;
+  height: 36px;
+  background-image: url('glitter-final.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: glitterFall 10s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px #fff1f7);
+}
+
+@keyframes glitterFall {
+  0% {
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(130vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Fond animé tropical sunset */
+
+body {
+  background: linear-gradient(270deg, #ffc1cc, #ffd699, #fdd7e4, #ffb347, #ffa6c9);
+  background-size: 1000% 1000%;
+  animation: tropicalSunset 25s ease infinite;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+@keyframes tropicalSunset {
+  0% {background-position: 0% 50%;}
+  25% {background-position: 50% 50%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Palmiers, brume et logo magique */
+
+/* Palmiers en silhouette */
+
+
+/* Brume tropicale légère */
+
+}
+
+/* Apparition magique du logo */
+.site-title {
+  animation: logoFadeIn 3s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fond pastel glitter palmiers personnalisé */
+
+body {
+  background: url('background-palmiers.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Sunset animé + palmier répété (version corrigée) */
+
+body {
+  background: linear-gradient(270deg, #ffc1cc, #ffd699, #fdd7e4, #ffb347, #ffa6c9);
+  background-size: 1000% 1000%;
+  animation: sunsetFlow 25s ease infinite;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('palmtree-glitter.png');
+  background-repeat: repeat;
+  background-size: 200px;
+  opacity: 0.25;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes sunsetFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Version propre sans watermark imgur */
+
+body {
+  background: linear-gradient(270deg, #ffc1cc, #ffd699, #fdd7e4, #ffb347, #ffa6c9);
+  background-size: 1000% 1000%;
+  animation: sunsetFlow 25s ease infinite;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('palmtree-glitter.png');
+  background-repeat: repeat;
+  background-size: 200px;
+  opacity: 0.18;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes sunsetFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}

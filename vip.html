@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Karibean Dolls Royal Club</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="vip">
+  <header>
+    <h1>
+      <span class="crown">👑</span> Karibean Dolls Royal Club
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-tr="home" data-tr="home">Accueil</a></li>
+        <li><a href="produits.html" data-tr="products" data-tr="products">Produits</a></li>
+        <li><a href="lookbook.html" data-tr="lookbook" data-tr="lookbook">Lookbook</a></li>
+        <li><a href="vip.html" class="active">VIP Club</a></li>
+        <li><a href="limited.html">Édition Limitée</a></li>
+        <li><a href="favoris.html">Favoris</a></li>
+        <li><a href="panier.html">Panier</a></li>
+        <li><a href="avis.html">Avis</a></li>
+        <li><a href="contact.html" data-tr="contact" data-tr="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="vip-banner">
+      <img src="vip_queen.jpg" alt="VIP Queen Keemberlie">
+      <p class="vip-text">Rejoins le club le plus baddie de l’île</p>
+      <ul class="vip-benefits">
+        <li>✨ Réductions exclusives</li>
+        <li>✨ Accès en avant-première</li>
+        <li>✨ Cadeaux et surprises</li>
+      </ul>
+      <form class="vip-form">
+        <input type="text" placeholder="Ton nom cute" required>
+        <input type="email" placeholder="Ton email" required>
+        <button type="submit">Rejoindre le Royal Club</button>
+      </form>
+    </section>
+  </main>
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': '<span data-tr="glitter">Clique-moi pour du glitter ✨ ✨</span> ✨', 'spotify-rights': '<span data-tr="spotify-rights">© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.</span>', 'spotify-button': '<span data-tr="spotify-button">Écouter la playlist complète sur Spotify</span>', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Clique-moi pour du glitter ✨ ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.', 'spotify-button': 'Écouter la playlist complète sur Spotify', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Karibean Dolls</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="contact-body">
+<img src="karibean_dolls_contact_visual.jpg" alt="Karibean Dolls Contact" class="contact-banner" style="width: 100%; max-width: 700px; display: block; margin: 20px auto;" />
+
+  <h1 class="contact-title">Contacte-nous, doll 💌</h1>
+  <div class="contact-card">
+    <form action="#" method="POST">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name" placeholder="Ex: Karibean Babe" required>
+
+      <label for="email">Adresse Email</label>
+      <input type="email" id="email" name="email" placeholder="Ex: doll@email.com" required>
+
+      <label for="message">Ton message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Dis-nous tout, babe..." required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <div class="return-button">
+    <a href="index.html" class="cute-return-btn">← Retour à l'accueil</a>
+  </div>
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': '<span data-tr="glitter">Clique-moi pour du glitter ✨ ✨</span> ✨', 'spotify-rights': '<span data-tr="spotify-rights">© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.</span>', 'spotify-button': '<span data-tr="spotify-button">Écouter la playlist complète sur Spotify</span>', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Clique-moi pour du glitter ✨ ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.', 'spotify-button': 'Écouter la playlist complète sur Spotify', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+</body>
+</html>
+

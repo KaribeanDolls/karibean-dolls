@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lookbook - Karibean Dolls</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lookbook-container {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .lookbook-container img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .hotspot:hover {
+      outline: 2px solid #ff69b4;
+      box-shadow: 0 0 10px #ffb6d5;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="language-selector">
+  <label for="language">🌐</label>
+  <select id="language" onchange="changeLanguage(this.value)">
+    <option value="fr">🇫🇷 Français</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="de">🇩🇪 Deutsch</option>
+  </select>
+</div>
+<style>
+.language-selector {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background: white;
+  border-radius: 12px;
+  padding: 6px 12px;
+  box-shadow: 0 0 12px rgba(255, 182, 217, 0.5);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+.language-selector select {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 13px;
+}
+</style>
+
+<div class="language-selector">
+  <label for="language">🌐</label>
+  <select id="language" onchange="changeLanguage(this.value)">
+    <option value="fr">🇫🇷 Français</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="de">🇩🇪 Deutsch</option>
+  </select>
+</div>
+<style>
+.language-selector {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background: white;
+  border-radius: 12px;
+  padding: 6px 12px;
+  box-shadow: 0 0 12px rgba(255, 182, 217, 0.5);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+.language-selector select {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 13px;
+}
+</style>
+
+  <h1 style="text-align:center; color:#e91e63; margin-bottom:30px;" data-tr="lookbook" data-tr="lookbook">Lookbook</h1>
+
+  <div class="lookbook-container">
+    <img src="lookbook_illustration.jpg" alt="Lookbook">
+
+    <!-- Zone 1 : Robe violette -->
+    <a href="produits.html#lavender-glow" class="hotspot" style="top: 20%; left: 5%; width: 35%; height: 40%;"></a>
+
+    <!-- Zone 2 : Maillot vert tropical -->
+    <a href="produits.html#island-slay" class="hotspot" style="top: 20%; left: 52%; width: 35%; height: 40%;"></a>
+
+    <!-- Zone 3 : T-shirt “Babe” + short -->
+    <a href="produits.html#babe-vibes" class="hotspot" style="top: 63%; left: 5%; width: 35%; height: 33%;"></a>
+
+    <!-- Zone 4 : Robe longue tropicale -->
+    <a href="produits.html#tropical-flame" class="hotspot" style="top: 63%; left: 52%; width: 35%; height: 33%;"></a>
+  </div>
+
+  <div class="return-button">
+    <a href="index.html" class="cute-return-btn">← Retour à l'accueil</a>
+  </div>
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': '<span data-tr="glitter">Clique-moi pour du glitter ✨ ✨</span> ✨', 'spotify-rights': '<span data-tr="spotify-rights">© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.</span>', 'spotify-button': '<span data-tr="spotify-button">Écouter la playlist complète sur Spotify</span>', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+
+<script>
+const translations = {'fr': {'home': 'Accueil', 'products': 'Produits', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Clique-moi pour du glitter ✨ ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.', 'spotify-button': 'Écouter la playlist complète sur Spotify', 'title': 'Bienvenue chez Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'en': {'home': 'Home', 'products': 'Products', 'lookbook': 'Lookbook', 'contact': 'Contact', 'vip': 'VIP', 'glitter': 'Click me for glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist embedded via Spotify – all rights reserved to the artists.', 'spotify-button': 'Listen to the full playlist on Spotify', 'title': 'Welcome to Karibean Dolls', 'subtitle': 'Bad Bitch Mood Only'}, 'es': {'home': 'Inicio', 'products': 'Productos', 'lookbook': 'Galería', 'contact': 'Contacto', 'vip': 'VIP', 'glitter': 'Haz clic para glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Lista integrada vía Spotify – todos los derechos reservados a los artistas.', 'spotify-button': 'Escucha la playlist completa en Spotify', 'title': 'Bienvenida a Karibean Dolls', 'subtitle': 'Solo vibras de diva'}, 'it': {'home': 'Home', 'products': 'Prodotti', 'lookbook': 'Lookbook', 'contact': 'Contatto', 'vip': 'VIP', 'glitter': 'Clicca per glitter ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist integrata via Spotify – tutti i diritti riservati agli artisti.', 'spotify-button': 'Ascolta la playlist completa su Spotify', 'title': 'Benvenuta su Karibean Dolls', 'subtitle': 'Solo vibes da bad bitch'}, 'de': {'home': 'Startseite', 'products': 'Produkte', 'lookbook': 'Lookbook', 'contact': 'Kontakt', 'vip': 'VIP', 'glitter': 'Klick mich für Glitzer ✨', 'spotify-rights': '© 2025 Karibean Dolls. Playlist eingebettet via Spotify – alle Rechte bei den Künstlern.', 'spotify-button': 'Gesamte Playlist auf Spotify anhören', 'title': 'Willkommen bei Karibean Dolls', 'subtitle': 'Nur Bad Bitch Stimmung'}};
+
+function changeLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  applyTranslations(lang);
+}
+
+function applyTranslations(lang) {
+  const tr = translations[lang] || translations.fr;
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    const key = el.getAttribute("data-tr");
+    if (tr[key]) el.textContent = tr[key];
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+  document.getElementById('language').value = lang;
+  applyTranslations(lang);
+});
+</script>
+
+</body>
+</html>
+
