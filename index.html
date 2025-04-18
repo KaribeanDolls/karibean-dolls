@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<style>
+.spotify-player {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 0;
+  filter: drop-shadow(0 0 8px rgba(255, 192, 203, 0.3));
+}
+</style>
+
+
+
+
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Karibean Dolls</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="site-title hidden-logo">Karibean Dolls</h1>
+    <nav>
+      <button>Accueil</button>
+      <button>Produits</button>
+      <button>Lookbook</button>
+      <button>Contact</button>
+      <button>VIP</button>
+    </nav>
+  </header>
+
+  <main>
+    <p class="intro">Explore ton univers baddie tropical et Y2K.</p>
+    <button id="glitterBtn">Clique-moi pour du glitter ✨</button>
+    <div id="glitterContainer"></div>
+  </main>
+
+<!-- Début lecteur Spotify -->
+<div class="radio-container">
+  <p class="radio-heading">Karibean Dolls Radio — Bad B*tch Mood Only</p>
+
+  <p class="radio-note">Pas connectée ? Tu n’entendras que des extraits...</p>
+
+  <a href="https://open.spotify.com/playlist/62BC7JgoITYro9zhVQw3oD?si=pXPv4O7ySCyDZSoZQLRr0Q&pi=ynpcWKo-TpWOV" target="_blank" class="spotify-button">
+    Écouter la playlist complète sur Spotify
+  </a>
+
+  
+
+
+
+  <p class="footer-note">© 2025 Karibean Dolls. Playlist intégrée via Spotify – tous droits réservés aux artistes.</p>
+</div>
+<!-- Fin lecteur Spotify -->
+
+
+<div class="spotify-player">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/62BC7JgoITYro9zhVQw3oD?utm_source=generator&theme=0"
+    width="100%" height="152" frameBorder="0" allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"></iframe>
+</div>
+
+</body>
+</html>
