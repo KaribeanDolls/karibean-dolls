@@ -608,3 +608,32 @@ body::before {
     box-shadow: 0 0 18px rgba(255, 105, 180, 0.4);
   }
 }
+
+
+
+/* Nettoyage animation pour éviter le lag */
+.site-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+  color: #ff69b4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.karibean-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 60%;
+  border-radius: 15px;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+}
+
+.spotify-player {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Suppression d’animations lourdes */
+@keyframes none {}
