@@ -468,3 +468,48 @@ body::before {
   position: relative;
   z-index: 1;
 }
+
+
+
+@keyframes logoZoomGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: drop-shadow(0 0 0px hotpink);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px hotpink);
+  }
+}
+
+.site-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #ff69b4;
+  animation: logoZoomGlow 1.8s ease-out forwards;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+}
+
+.spotify-player {
+  animation: glowPulse 2.5s ease-in-out infinite;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
