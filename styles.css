@@ -513,3 +513,25 @@ body::before {
   overflow: hidden;
   position: relative;
 }
+
+
+
+.karibean-image {
+  display: block;
+  margin: 40px auto;
+  max-width: 80%;
+  border-radius: 20px;
+  animation: fadeZoom 2s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
