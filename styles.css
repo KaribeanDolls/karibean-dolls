@@ -535,3 +535,15 @@ body::before {
     transform: scale(1);
   }
 }
+
+
+
+.karibean-image {
+  display: block;
+  margin: 30px auto;
+  max-width: 60%;
+  border-radius: 20px;
+  animation: fadeZoom 2s ease-in-out;
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
