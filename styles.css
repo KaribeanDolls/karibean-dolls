@@ -380,3 +380,30 @@ body::before {
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
+
+
+
+/* Animation d’écriture + glow cute */
+@keyframes writeGlow {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px hotpink);
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px hotpink);
+    width: 100%;
+  }
+}
+
+.site-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #ff69b4;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid hotpink;
+  animation: writeGlow 3s steps(30, end) forwards;
+}
