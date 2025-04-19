@@ -430,3 +430,41 @@ body::before {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
+
+
+
+.radio-heading {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #d94ba0; /* rose plus doux et un peu plus violet */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
+
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.spotify-player::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 20%, transparent 70%);
+  background-size: 20px 20px;
+  animation: sparkleTwinkle 1.5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(1px);
+}
+
+.spotify-player {
+  position: relative;
+  z-index: 1;
+}
